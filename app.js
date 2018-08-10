@@ -26,7 +26,7 @@ shuffle(icons);
   {
   const card =
         document.CreateElement("li");
-    card.classList.add("card);
+    card.classList.add("card");
                        card.innerHTML = "<i
   class="$(icons[i]}" ></i>;
                        cardDeck.appendChild(card);
