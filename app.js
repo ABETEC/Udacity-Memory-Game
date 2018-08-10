@@ -1,7 +1,11 @@
 /*
  * Create a list that holds all of your cards
  */
-,const icons = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf",
+let open = [];
+let match = [];
+let moves = 0;
+
+let deckCards = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf",
                 "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", 
                 "fa fa-paper-plane-o", "fa fa-cube"];
 
@@ -11,6 +15,13 @@
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
+$("<ul class="deck">
+  </ul>").appendTo($("container"));
+  
+  for (let i = 0; i <deckCards.length; i++){
+  var allIcons = "<li class ="card"><i
+  class="$(icons[i]}" ></i></li>";
+  $(allIcons).appendTo($(".deck"));}
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
