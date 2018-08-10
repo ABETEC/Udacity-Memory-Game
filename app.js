@@ -36,13 +36,32 @@ shuffle(icons);
 click(cards);
   }
   }
+/* 
+*Click event for cards
+*/
+let firstClick = true;
+function click(card) {
+      card.addEventListener ("click",
+          function() {
+            //if Card is clicked start timer
+            if(isFirstClick) {
+                  // Start our timer
+                  startTimer();
+                  // Change our First Click indicator's value
+                  isFirstClick = false;
+            }
+            //Opened cards variables
+            const currentCard = this;
+            const lastCard = flippedCards[0];
+            //
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
-        cu CardsrrentIndex -= 1;
+        cu CardsrrentIndex -= 1;is
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
