@@ -1,35 +1,47 @@
 /*
  * Create a list that holds all of your cards
  */
-let open = [];
-let match = [];
-let moves = 0;
 
-let deckCards = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf",
+const icons = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf",
                 "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", 
                 "fa fa-paper-plane-o", "fa fa-cube"];
+//The Deck container
+const cardDeck =
+      document.querySelector(".deck");
+let flippedCards = []
+let matchedCards = []
 
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
+  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
-$("<ul class="deck">
-  </ul>").appendTo($("container"));
-  
-  for (let i = 0; i <deckCards.length; i++){
-  var allIcons = "<li class ="card"><i
-  class="$(icons[i]}" ></i></li>";
-  $(allIcons).appendTo($(".deck"));}
-
+shuffle(icons);
+/*
+*Building The Cards
+*/
+  function init() {
+  for (let i = 0; i <deckCards.length; i++)
+  {
+  const card =
+        document.CreateElement("li");
+    card.classList.add("card);
+                       card.innerHTML = "<i
+  class="$(icons[i]}" ></i>;
+                       cardDeck.appendChild(card);
+    
+  //Add Click Event to the cards
+click(cards);
+  }
+  }
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+        cu CardsrrentIndex -= 1;
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
