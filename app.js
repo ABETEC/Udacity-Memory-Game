@@ -69,8 +69,45 @@ function shuffle(array) {
 
     return array;
 }
-
-
+/*"
+*Rating System
+*/
+            const starHolder =
+                  document.querySelector(".stars");
+            starHolder.innerHTML = '<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class= "fa fa-star"></i></li>';
+        function rate() {
+              if (moves= 15) {
+                    starHolder.innerHTML = '<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>';
+              }
+              if (moves 25) {
+                    starHolder.innerHTML = '<li><i class="fa fa-star"></i></li>';
+              }
+        }
+            /*
+            *Timer fuctions
+            */
+            const timerContainer =
+                  document.querySelector(".timer");
+            let liveTimer,
+                totalSeconds = 0;
+            //set default value to the timer's container
+            timerContainer.innerHTML = totalSeconds + 's';
+            function starTimer(){
+                  liveTimer = setInterval(function() {
+                        //increase total seconds by 1
+                        totalSeconds++;
+                        //Update the HTML container with the new time
+                        timerContainer.innerHTML = 
+                              totalSeconds + 's';
+                  }, 1000);
+            }
+            //To stop the timer
+            function stopTimer() {
+                  clearInterval(liveTimer);
+            }
+            
+                                          
+=
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
