@@ -1,5 +1,4 @@
-<!doctype html>
-<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Matching Game</title>
@@ -30,28 +29,26 @@
         	</div>
         </section>
         
-        <div class="modal">
+        
+        <ul class="deck"></ul>
+            <!-- Bootstrap modal. URL: https://getbootstrap.com/docs/4.0/components/modal/ -->
+              <div class="modal">
             <div class="inner">
                 <h2>congratulations!</h2>
-                <p>you won.</p>
-                <p>
-                <span
-                      id="total_moves"</span>Your rating is:<span 
-                                id="timer"></span>
-                    <p/>
-                <p>AWESOME!! <i
-                                class="fa fa-trophy"></i>
-                </p>
-                <button class="play_again">play again?</>button>
+                <p>YOU WIN.</p>
+                <p>You have been awarded
+                    <span class="endStars"</span> stars.</p>
+                <p>You completed the game<span class="finalMoves"</span>
+                    moves</p>
+                <p>it took you <span class=endMins></span> minutes and <span class="endSecs"</>seconds to complete the game </p> 
+                <button class="playAgain"
+                        value="play again?">play again?</>button>
                     <div/>
                     <div/>
-            
-
-        <ul class="deck">
-            
-        </ul>
-    </div>
-
-    <script src="js/app.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+           
+                  <script src="js/app.js"></script>
 </body>
-</html>
+
