@@ -105,9 +105,46 @@ function shuffle(array) {
             function stopTimer() {
                   clearInterval(liveTimer);
             }
-            
-                                          
-=
+           /*
+           * Reset button resets the game 
+           */
+            const resetBtn =
+                  document.querySelector(".restart");
+            resetBtn.addEventListner("click",
+                                     function(){
+                  //Delete All Cards
+                  cardDeck.innerHTML = "";
+                  //Call Init to create new cards
+                  init();
+                  //Reset all variables
+                  
+                  //Reset moves
+                  martchedCards = [];
+                  moves = 0;
+                  movesHolder.innerHTML = moves;
+                  
+                  //Reset rating
+                  starHolder.innerHTML = '<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>;
+                 //reset timer 
+                  stopTimer();
+                  isFirstClick = true;
+                  totalSeconds = 0;
+                  timerContainer.innerHTML = totalSeconds + "s";
+                  //re-shuffles cards
+                  shuffle(icons);
+            });
+            /*
+            *starts the game
+            */
+            init();
+            /*
+            *Display the cards on the page
+            * - shuffle the list of the cards using the provided "shuffle" method below
+            * - loop through each card and create its HTML
+            * - add each card's HTML to the page
+            */
+                                       
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
