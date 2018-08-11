@@ -119,3 +119,23 @@ modal. {
     z-index: 99;
     transition: all 300ms ease;
 }
+modal.inner h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+.modal.inner p {
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+}
+.modal .inner button {
+    margin-top: 1.5em;
+    padding: 0.5em 3em;
+    font-size: 1.1em;
+    border: 0;
+    background: #fff;
+    box-shadow: 1px 1px 5px 0px #ccc
+        cursor: pointer;
+    transition: all 300ms ease;
+}
+.modal .inner button:hover {
+    box-shadow: none;
