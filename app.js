@@ -81,19 +81,72 @@ function compare(currentCard,lastCard) {
             setTimeout (Function() {
                         currentCard.classList.remove("open","show","disabled");
             lastCard.classList.remove("open","show","disabled");
-            
-                  
-                  
-                  
-                  
-
+      }, 500);
+      flippedCards = [];
+}
+//Adda a new move
+doneMove();
+/*
+*Check to see if the gae is over
+*/
+function allDone () {
+      if (matchedCards.length ===
+          icons.length) {
+            stopTimer();
+            gameOverModal();
+      }
+}
+/*
+*Game Over Modal
+*/
+const modal =
+      document.querySelector(".modal");
+function gameOverModal () {
+      //Shows the Modal
+      modal.style.top = "0"
+      //Adds move to Modal
+      const totalMoves =
+            document.querySelector("#total_moves);
+                                   totalMoves.innerHTML= moves + 1;
+                                   
+                                   //Adds time to modal
+                                   const allSeconds =
+                                   document.querySelector("#allSeconds);
+                                   allSeconds.innerHTML = totalSeconds;
+                                   
+                                   //Add rating to the modal???
+                                   
+                                   }
+                                   //Play Again Button
+                                   const repeatBtn =
+                                   document.querySelector(".features .play-again");
+      repeatBtnFromModal.addEventListener("click",function () {
+            //Hide the modal
+            modal.style.top = "-150";
+            //Start the game again
+            repeat ();
+      });
+      
+      /*
+      *Add the moves
+      */
+      const movesHolder =
+            document.querySelector(".moves")
+      let moves = 0;
+      movesHolder.innerHTML = 0;
+      function addMove () {
+            moves++;
+            movesHolder.innerHTML = moves;
+            //rates moves
+            rate ();
+      }
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
-        cu CardsrrentIndex -= 1;is
+        currentIndex -= 1;is
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
@@ -106,17 +159,17 @@ function shuffle(array) {
 */
             const starHolder =
                   document.querySelector(".stars");
-            starHolder.innerHTML = '<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class= "fa fa-star"></i></li>';
+            starHolder.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class= "fa fa-star"></i></li>`;
         function rate() {
               if (moves= 15) {
-                    starHolder.innerHTML = '<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>';
+                    starHolder.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
               }
               if (moves 25) {
-                    starHolder.innerHTML = '<li><i class="fa fa-star"></i></li>';
+                    starHolder.innerHTML = `<li><i class="fa fa-star"></i></li>`;
               }
         }
             /*
-            *Timer fuctions
+            *Timer Fuctions
             */
             const timerContainer =
                   document.querySelector(".timer");
@@ -156,7 +209,7 @@ function shuffle(array) {
                   movesHolder.innerHTML = moves;
                   
                   //Reset rating
-                  starHolder.innerHTML = '<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>;
+                  starHolder.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
                  //reset timer 
                   stopTimer();
                   isFirstClick = true;
