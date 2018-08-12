@@ -87,7 +87,7 @@ function compare(currentCard,lastCard) {
 //Adda a new move
 doneMove();
 /*
-*Check to see if the gae is over
+*Check to see if the game is over
 */
 function allDone () {
       if (matchedCards.length ===
@@ -111,7 +111,7 @@ function gameOverModal () {
                                    
                                    //Adds time to modal
                                    const allSeconds =
-                                   document.querySelector("#allSeconds);
+                                   document.querySelector("#allSeconds");
                                    allSeconds.innerHTML = totalSeconds;
                                    
                                    //Add rating to the modal???
