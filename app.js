@@ -106,7 +106,7 @@ function gameOverModal () {
       modal.style.top = "0";
       //Adds moves to Modal
       const totalMoves =
-            document.querySelector("#total_moves);
+            document.querySelector("#total_moves");
                                    totalMoves.innerHTML= moves + 1;
                                    
                                    //Adds time to modal
