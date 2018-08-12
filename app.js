@@ -103,8 +103,8 @@ const modal =
       document.querySelector(".modal");
 function gameOverModal () {
       //Shows the Modal
-      modal.style.top = "0"
-      //Adds move to Modal
+      modal.style.top = "0";
+      //Adds moves to Modal
       const totalMoves =
             document.querySelector("#total_moves);
                                    totalMoves.innerHTML= moves + 1;
