@@ -53,7 +53,42 @@ function click(card) {
             //Opened cards variables
             const currentCard = this;
             const lastCard = flippedCards[0];
-            //
+            //The OPENED card event 
+            if (flippedCards.length === 1) {
+                  //Reveals flipped card
+                  card.classList.add("open","show");
+                  flippedCards.push(this);
+                  //Compare two cards that are open
+                  compare (currentCard,lastCard);
+            } else {
+                  currentCard.classList.add("open", "show",,"disabled");
+                  flippedCrads.push(this);
+            }
+      });
+                             }
+/*
+*collates the 2 cards
+*/
+function compare(currentCard,lastCard) {
+      if (rrentCard.innerHTML ===
+          lastCard.innerHTML) {
+            //The Cards Ara Matched
+            currentCard.classList.add("match");
+            lastCard.classList.add("matcha")
+            matchedCards,push(currentCard,lastCard);
+            flippedCards = [],
+                  //Chack if the game is over
+                  allDone();
+      }else {
+            //Wait time 500ms then do this
+            setTimeout (Function() {
+                        currentCard.classList.remove("open","show","disabled");
+            lastCard.classList.remove("open","show","disabled");
+            
+                  
+                  
+                  
+                  
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
