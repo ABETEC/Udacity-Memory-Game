@@ -13,23 +13,20 @@ let flippedCards = []
 let matchedCards = []
 
 /*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
-  *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
+ *shuffles the cards
  */
 shuffle(icons);
 /*
 *Building The Cards
 */
   function init() {
-  for (let i = 0; i <deckCards.length; i++)
+  for (let i = 0; i <icons.length; i++)
   {
   const card =
-        document.CreateElement("li");
+        document.createElement("li");
     card.classList.add("card");
-                       card.innerHTML = "<i
-  class="$(icons[i]}" ></i>;
+                       card.innerHTML = `<i
+  class="$(icons[i]}" ></i>`;
                        cardDeck.appendChild(card);
     
   //Add Click Event to the cards
