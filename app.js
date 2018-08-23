@@ -2,9 +2,23 @@
  * Create a list that holds all of your cards
  */
 
-const icons = ["fa fa-diamond",
+const Icons = ["fa fa-diamond",
 "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-diamond",
 "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", "fa fa-paper-plane-o", "fa fa-cube"];
+
+const cardsContainer = document.querySelector(".deck");
+
+
+// Create the cards
+
+for(let i = 0; i < Icons.lenght; i++) {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      cardsContainer.appendChild(card);
+}
+
+
+
 
 //The Deck container
 const cardDeck =
